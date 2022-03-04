@@ -6,8 +6,8 @@ print("print('what to print')")
 
 # 1.2 - Input Functions
 
-city = input("What is you city name? ")
-pet = input("Whats you pet name? ")
+city = input("What is you city name?\n")
+pet = input("Whats you pet name?\n")
 print("Your cool nick name is " + city + " " + pet)
 
 # 1.3 - Variables 
