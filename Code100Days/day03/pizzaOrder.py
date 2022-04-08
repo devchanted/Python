@@ -1,23 +1,31 @@
-print("Welcome to roller coaster")
+from re import M
 
-height = int(input("Enter your height in cms: "))
 
-if height > 120 :
-    age = int(input("Please enter your age: "))
+print("Welcome to awesome Pizza Shop")
 
-    if age < 12:
-        price = 5
-    elif age <18:
-        price = 7
-    else:
-        price = 12
-    
-    photo = input("Do you need photos? ")
+size = input("What size pizz you woould like to order. S M L : ")
+pepperoni = input('Do you want pepperoni? Y or N :')
+extra_cheese = input("Do you need extra cheese? Y or N: ")
+bill =0
 
-    if photo == "yes":
-        price = price + 3
-        print(f"Total ticket price is : {price} ")
-    else:
-        print(f"Total ticket price is : {price} ")
+if size == "L":
+    bill =+25
+elif size == "M":
+    bill =+20
+elif size == "S":
+    bill =+15
 else:
-    print("you are not tall enough")
+    print("invalid Entry")
+
+if pepperoni == "Y":
+    if size == "S":
+        bill =+2
+    else:
+        bill =+3
+
+if extra_cheese == "Y":
+    bill +=1
+
+print(bill)
+
+
