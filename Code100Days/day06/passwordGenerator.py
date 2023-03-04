@@ -28,6 +28,7 @@ for i in range(0,nr_numbers):
     password =  password+numbers[i]
 print("Your simple password is: " +password)
 
+#code for a random password
 random_password = ""
 for i in range(0, nr_letters):
     random_password += random.choice(letters)
@@ -37,4 +38,21 @@ for i in range(0,nr_numbers):
     random_password += random.choice(numbers)
 print("Your complex  password is: "+random_password)
 
+#shuffle the order 
+
+shuffle_password = ""
+
+password_list = []
+for i in range(0, nr_letters):
+    password_list.append(random.choice(letters))
+for i in range(0,nr_symbols):
+    password_list.append(random.choice(symbols))
+for i in range(0,nr_numbers):
+    password_list.append(random.choice(numbers))
+print(password_list)
+
+random.shuffle(password_list)
+for char in password_list:
+    shuffle_password += char
+print("Your shuffled  password is: "+shuffle_password)
 
