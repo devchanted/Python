@@ -73,8 +73,13 @@ while not end_of_game:
         letter = word_random[char]
         if guess == letter:
             display[char] = letter
+            #print(f"{' '.join(display)}")
+            #print(stages[lives])
+    print(f"{' '.join(display)}")
     if guess not in word_random:
         lives -= 1
+        print(f"{' '.join(display)}")
+        print(stages[lives])
         if lives == 0:
             end_of_game = True
             print("You Lose")
