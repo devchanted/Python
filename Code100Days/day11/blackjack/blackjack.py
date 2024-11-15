@@ -10,6 +10,12 @@ def deal_card():
 
 # create a play game and assign two cards to user and computer
 
+def calculate_score(cards):
+    if sum(cards) == 21 and len(cards) == 2:
+        print("Blackjack")
+    else:
+        print("No blackjack")
+
 def play_game():
     user_cards = []
     computer_cards = []
@@ -19,5 +25,7 @@ def play_game():
         computer_cards.append(deal_card())
     print(user_cards)
     print(computer_cards)
+    
 
 play_game()
+
