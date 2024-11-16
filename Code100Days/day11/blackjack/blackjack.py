@@ -25,8 +25,7 @@ def play_game():
     for _ in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
-    print(user_cards)
-    print(computer_cards)
+
 
 
     u_score = calculate_score(user_cards)
@@ -37,5 +36,7 @@ def play_game():
 
 
 
-play_game()
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
+    print("\n" * 20)
+    play_game()
 
