@@ -12,9 +12,11 @@ def deal_card():
 
 def calculate_score(cards):
     if sum(cards) == 21 and len(cards) == 2:
-        print("Blackjack")
-    else:
-        print("No blackjack")
+        return 0
+    if sum(cards) > 21 and 11 in cards:
+        cards.remove(11)
+        cards.append(1)
+    return sum(cards)
 
 def play_game():
     user_cards = []
@@ -25,7 +27,15 @@ def play_game():
         computer_cards.append(deal_card())
     print(user_cards)
     print(computer_cards)
-    
+
+
+    u_score = calculate_score(user_cards)
+    c_score = calculate_score(computer_cards)
+
+    print(f"Your cards: {user_cards}, current score: {u_score}")
+    print(f"Computer's first card: {computer_cards[0]}")
+
+
 
 play_game()
 
